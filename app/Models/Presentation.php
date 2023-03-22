@@ -9,6 +9,8 @@ class Presentation extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     public function medicine()
     {
         return $this->belongsTo(Medicine::class);
