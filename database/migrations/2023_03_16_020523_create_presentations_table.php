@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('presentations', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('regular_price');
-            $table->integer('price');
-            $table->integer('offer_price');
+            $table->float('regular_price')->nullable();
+            $table->float('price');
+            $table->float('offer_price')->nullable();
             $table->foreignId('medicine_id')->constrained('medicines', 'id');
             $table->timestamps();
         });
